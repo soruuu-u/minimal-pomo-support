@@ -1,0 +1,234 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Guide Page Specific Styles */
+.guide-header {
+  text-align: center;
+  padding: 48px 0 56px;
+}
+
+.guide-header .app-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.guide-header .app-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.guide-header h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  margin: 0 0 12px;
+  letter-spacing: -0.03em;
+}
+
+.guide-header .tagline {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Step Cards */
+.step-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: var(--shadow-sm);
+}
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.step-card:hover::before {
+  opacity: 1;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.step-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.step-card h2::after {
+  display: none;
+}
+
+.step-card p {
+  margin: 0 0 12px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.step-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Flow Timeline */
+.flow-section {
+  margin-top: 48px;
+  margin-bottom: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.flow-section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 24px;
+}
+
+.flow-list::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+  border-radius: 1px;
+}
+
+.flow-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.flow-item:hover {
+  transform: translateX(8px);
+}
+
+.flow-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 4px var(--bg);
+  transition: all 0.2s ease;
+}
+
+.flow-item:hover .flow-number {
+  transform: scale(1.1);
+  background: var(--accent-strong);
+  color: #000000 !important;
+  /* 背景が明るい色(accent-strong)になるため黒文字で視認性確保 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .flow-item:hover .flow-number {
+    background: #ffffff;
+    color: #000000 !important;
+  }
+}
+
+.flow-item .flow-text {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.flow-item:hover .flow-text {
+  color: var(--accent);
+}
+
+/* Back Link */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.back-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .step-card {
+    padding: 24px 20px;
+  }
+
+  .step-header {
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .flow-list {
+    padding-left: 16px;
+  }
+}
