@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:;">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <link rel="stylesheet" href="assets/css/minimal.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <title>Minimal Pomo - シンプルなポモドーロタイマーアプリ</title>
+  <meta name="description" content="Minimal Pomo の基本的な使い方やポリシーをまとめたサポートページです。" />
+
+  <!-- OGP Tags -->
+  <meta property="og:title" content="Minimal Pomo - シンプルなポモドーロタイマーアプリ">
+  <meta property="og:description" content="Minimal Pomo の基本的な使い方やポリシーをまとめたサポートページです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minimal-pomo.support/"> <!-- 公開ドメインに合わせて変更してください -->
+  <meta property="og:image" content="https://minimal-pomo.support/assets/favicon.png"> <!-- 公開ドメインに合わせて変更してください -->
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+  <main>
+    <article>
+      <header class="hero reveal">
+        <div class="hero-content">
+          <div class="app-icon-wrapper">
+            <img src="assets/app_icon_rounded.png" alt="Minimal Pomo アプリアイコン" class="app-icon" fetchpriority="high" />
+          </div>
+          <h1>Minimal Pomo</h1>
+          <p class="tagline">タスクとポモドーロを最短で回す。</p>
+        </div>
+      </header>
+
+      <section id="features" class="features reveal">
+        <h2>機能</h2>
+        <div class="feature-grid">
+          <div class="feature-item reveal reveal-delay-1">
+            <h3>タスク管理</h3>
+            <p>タブ管理、実行キュー、期日設定などでタスクを効率的に整理し、迷わず実行できます。</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-2">
+            <h3>柔軟なタイマー</h3>
+            <p>ポモドーロとストップウォッチを搭載。作業スタイルに合わせて時間やモードを自由に設定可能。</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-3">
+            <h3>進捗の記録</h3>
+            <p>カレンダーとヒートマップで日々の集中を記録。過去の履歴を振り返り、モチベーションを維持。</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-4">
+            <h3>カスタマイズ</h3>
+            <p>通知音やアクセントカラー（Pro）など、自分だけの集中環境を作れます。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <h2>基本的な使い方</h2>
+        <a href="support/guide/how_to_use.html" class="guide-card">
+          <div class="guide-info">
+            <h3>スタートガイドを見る</h3>
+            <p>タスクの登録からポモドーロの実践、振り返りまで。<br>アプリの基本的な活用フローをわかりやすく解説します。</p>
+          </div>
+          <div class="guide-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      </section>
+
+      <section id="faq" class="reveal">
+        <h2>よくある質問</h2>
+        <div id="faq-list" class="faq-container">
+          <!-- FAQ items will be loaded here from assets/data/faq.json -->
+          <p style="padding: 20px; color: var(--muted);">読み込み中...</p>
+        </div>
+      </section>
+
+
+    </article>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="トップへ戻る">
+    ↑
+  </button>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/faq-loader.js"></script>
+</body>
+
+</html>
