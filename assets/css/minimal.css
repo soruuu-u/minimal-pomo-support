@@ -333,6 +333,44 @@ article::after {
   opacity: 0.85;
 }
 
+/* App Store Link */
+.app-store-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: 0 8px 24px -6px rgba(75, 85, 99, 0.4);
+}
+
+.app-store-link:hover,
+.app-store-link:focus-visible {
+  background: linear-gradient(135deg, var(--accent-strong) 0%, var(--accent) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -6px rgba(75, 85, 99, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-store-link {
+    background: linear-gradient(135deg, #8b929e 0%, #6b7280 100%);
+    box-shadow: 0 8px 24px -6px rgba(107, 114, 128, 0.3);
+  }
+
+  .app-store-link:hover,
+  .app-store-link:focus-visible {
+    background: linear-gradient(135deg, #a1a7b3 0%, #7b8290 100%);
+    box-shadow: 0 10px 28px -6px rgba(107, 114, 128, 0.4);
+  }
+}
+
 /* Features Section */
 .features {
   margin-top: 32px;
